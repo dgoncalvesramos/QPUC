@@ -25,30 +25,29 @@ public class WikidataQuery {
         return null;
     }
 
-    public static List<String> excuteComplexQuery(String entityId, String propertyId) {
+    public static List<String> excuteComplexQuery(String entityId, String propertyId, String labelName) {
         String sparqlEndpoint = "https://query.wikidata.org/sparql";
         String sparqlQuery = String.format(
                 "PREFIX wd: <http://www.wikidata.org/entity/> " +
                         "PREFIX wdt: <http://www.wikidata.org/prop/direct/> " +
                         "PREFIX wikibase: <http://wikiba.se/ontology#> " +
                         "PREFIX bd: <http://www.bigdata.com/rdf#> " +
-                        "SELECT ?positionLabel WHERE { " +
-                        "  wd:%s wdt:P39 ?position. " +
+                        "SELECT ?%sLabel WHERE { " +
+                        "  wd:%s wdt:%s ?%s. " +
                         "  SERVICE wikibase:label { bd:serviceParam wikibase:language \"[AUTO_LANGUAGE],en\". } " +
-                        "}", entityId);
+                        "}", labelName, entityId, propertyId, labelName);
 
         Query query = QueryFactory.create(sparqlQuery);
-        List<String> positions = new ArrayList<>();
+        List<String> resultsList = new ArrayList<>();
 
         try (QueryExecutionHTTP qExec = QueryExecutionHTTP.service(sparqlEndpoint).query(query).build()) {
             ResultSet results = qExec.execSelect();
             while (results.hasNext()) {
                 QuerySolution solution = results.next();
-                positions.add(solution.get("positionLabel").toString());
+                resultsList.add(solution.get(labelName+"Label").toString());
             }
         }
-
-        return positions;
+        return resultsList;
     }
 }
 

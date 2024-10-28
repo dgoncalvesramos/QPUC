@@ -4,7 +4,10 @@ public enum PropertyID {
     DATE_OF_BIRTH("P569"),
     SEXE_OR_GENDER("P21"),
     COUNTRY_OF_CITIZENSHIP("P27"),
-    POSITION_HELD("P39");
+    POSITION_HELD("P39"),
+    SPOUSE("P26"),
+    DATE_OF_DEATH("P570"),
+    CONVICTED_OF("P1399");
 
     private final String propertyID;
 

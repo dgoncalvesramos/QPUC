@@ -49,11 +49,24 @@ public class Game {
     }
 
     private void launchEasyDiffulcty(){
-        nb_attempts=5;
-        System.out.println("The character has been " + StringModifierService.removeLanguageTag(this.character.position_held.get(0)));
+        nb_attempts=1;
+        System.out.println("The character has been " + StringModifierService.removeLanguageTag(this.character.getPosition_held().get(0)));
         handleResponse();
-        System.out.println(this.character.getDate_of_birth());
+        System.out.println("The character is a " + StringModifierService.removeLanguageTag(this.character.getSexe_or_gender().get(0)));
         handleResponse();
+        System.out.println("The character was born the " + this.character.getDate_of_birth());
+        handleResponse();
+        if(this.character.getPosition_held().get(1) != null)
+            System.out.println("The character has been " + StringModifierService.removeLanguageTag(this.character.getPosition_held().get(1)));
+        else
+            System.out.println("The character is a " + StringModifierService.removeLanguageTag(this.character.getCountry_of_citizenship()));
+        handleResponse();
+        if(this.character.getSpouce().get(0) != null)
+            System.out.println("The character has been married to " + StringModifierService.removeLanguageTag(this.character.getSpouce().get(0)));
+        else
+            System.out.println("The character has been " + StringModifierService.removeLanguageTag(this.character.getPosition_held().get(2)));
+        handleResponse();
+
     }
 
     private void handleResponse(){
@@ -61,15 +74,29 @@ public class Game {
         Scanner sc = new Scanner(System.in);
         String input = StringModifierService.addUnderscoreBetweenBlanksAndPutItInUppercase(sc.nextLine());
         if(input.compareTo(this.character.getName()) == 0) {
-            System.out.println("Congratulations ! You win after : " + nb_attempts + " attempts !");
+            System.out.println("Congratulations ! You win after : " + nb_attempts + " attempt(s) !");
             System.exit(0);
         }
         else{
-            nb_attempts--;
+            nb_attempts++;
         }
     }
 
-    private void launchNormalDifficulty(){System.out.println("Not yet implemented");};
+    private void launchNormalDifficulty() {
+        nb_attempts=1;
+        System.out.println("The character is a " + StringModifierService.removeLanguageTag(this.character.getSexe_or_gender().get(0)));
+        handleResponse();
+        System.out.println("The character was born the " + this.character.getDate_of_birth());
+        handleResponse();
+        if(this.character.getPosition_held().get(0) != null)
+            System.out.println("The character has been " + StringModifierService.removeLanguageTag(this.character.getPosition_held().get(0)));
+        else
+            System.out.println("The character is a " + StringModifierService.removeLanguageTag(this.character.getCountry_of_citizenship()));
+        handleResponse();
+        if(this.character.getDate_of_death() != null)
+            System.out.println("The character has died " + StringModifierService.removeLanguageTag(this.character.getDate_of_death()));
+        handleResponse();
+    };
     private void launchHardDifficulty(){System.out.println("Not yet implemented");};
     private void launchCrazyDifficulty(){System.out.println("Not yet implemented");};
 

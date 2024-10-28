@@ -10,6 +10,6 @@ public class DateFormatterService {
         String datePart = dateTime.replaceAll("[^0-9-]", "").substring(0, 10);
         LocalDate date = LocalDate.parse(datePart); // Parse cleaned date string
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d 'of' MMMM 'in' yyyy", Locale.ENGLISH);
-        return "The character was born the " + date.format(formatter);
+        return date.format(formatter);
     }
 }
