@@ -3,7 +3,8 @@ package org.qpuc;
 public enum PropertyID {
     DATE_OF_BIRTH("P569"),
     SEXE_OR_GENDER("P21"),
-    COUNTRY_OF_CITIZENSHIP("P27");
+    COUNTRY_OF_CITIZENSHIP("P27"),
+    POSITION_HELD("P39");
 
     private final String propertyID;
 
