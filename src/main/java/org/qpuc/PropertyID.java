@@ -7,8 +7,10 @@ public enum PropertyID {
     POSITION_HELD("P39"),
     SPOUSE("P26"),
     DATE_OF_DEATH("P570"),
-    CONVICTED_OF("P1399");
-
+    CONVICTED_OF("P1399"),
+    NICKNAME("P1449"),
+    FATHER("P22"),
+    OCCUPATION("P106");
     private final String propertyID;
 
     /**

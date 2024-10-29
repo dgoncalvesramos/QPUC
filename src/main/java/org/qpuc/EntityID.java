@@ -11,7 +11,10 @@ public enum EntityID {
 
     JACQUES_CHIRAC("Q2105"),
     BARACK_OBAMA("Q76"),
-    DONALD_TRUMP("Q22686");
+    DONALD_TRUMP("Q22686"),
+    MAHATMA_GANDHI("Q1001"),
+    LEONARDO_DA_VINCI("Q762"),
+    LEONARDO_DICAPRIO("Q38111");
 
     private final String entityId;
     private static final List<EntityID> VALUES =
