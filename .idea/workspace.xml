@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d54d5c0c-f0f5-444e-b20e-607362d9d45b" name="Changes" comment="Start implementation of normal difficulty and correct some bugs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/qpuc/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/qpuc/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/qpuc/EntityID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/qpuc/EntityID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/qpuc/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/qpuc/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/qpuc/PropertyID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/qpuc/PropertyID.java" afterDir="false" />
+    <list default="true" id="d54d5c0c-f0f5-444e-b20e-607362d9d45b" name="Changes" comment="Add some characters to the game, finishing implementing normal difficulty">
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +151,7 @@
       <workItem from="1730141688713" duration="5788000" />
       <workItem from="1730198286558" duration="1118000" />
       <workItem from="1730203392117" duration="5000" />
-      <workItem from="1730207396238" duration="3527000" />
+      <workItem from="1730207396238" duration="3743000" />
     </task>
     <task id="LOCAL-00001" summary="Initialization of the project">
       <option name="closed" value="true" />
@@ -181,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730147657506</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add some characters to the game, finishing implementing normal difficulty">
+      <option name="closed" value="true" />
+      <created>1730211009558</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730211009559</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +206,8 @@
     <MESSAGE value="Initialization of the project" />
     <MESSAGE value="Add handleResponse method and start to implement easy difficulty game method" />
     <MESSAGE value="Start implementation of normal difficulty and correct some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start implementation of normal difficulty and correct some bugs" />
+    <MESSAGE value="Add some characters to the game, finishing implementing normal difficulty" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some characters to the game, finishing implementing normal difficulty" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
