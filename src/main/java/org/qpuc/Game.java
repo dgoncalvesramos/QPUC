@@ -118,8 +118,10 @@ public class Game {
             System.out.println("The character nickname is " + StringModifierService.removeLanguageTag(this.character.getNickname().get(0)));
         else if (this.character.getPosition_held().size() >= 3)
             System.out.println("The character has been " + StringModifierService.removeLanguageTag(this.character.getPosition_held().get(2)));
-        else
+        else if(!this.character.getFather().isEmpty())
             System.out.println("The character father is  " + StringModifierService.removeLanguageTag(this.character.getFather().get(0)));
+        else
+            System.out.println("The character has been married to " + StringModifierService.removeLanguageTag(this.character.getSpouce().get(0)));
         handleResponse();
         System.out.println("You lost, the character was : " + this.character.getName());
     }
